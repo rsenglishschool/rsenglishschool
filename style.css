@@ -1,5 +1,4 @@
-
-:root {
+  :root {
   --primary:#1e88e5;
   --secondary:#1565c0;
   --light:#f5f7fa;
@@ -395,4 +394,88 @@ nav ul li a {
 
 .home-card li{
   margin-bottom: 6px;
+}
+/* ===== GLOBAL WIDTH CONTROL (DESKTOP READABILITY) ===== */
+@media (min-width: 992px){
+  section,
+  .notice-container,
+  .profile-section{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ===== HEADER + SCHOOL NAME RESPONSIVE ===== */
+header h1{
+  font-size: clamp(22px, 2.4vw, 26px);
+  line-height: 1.25;
+  font-weight: 700;
+  max-width: 70%;
+}
+
+/* ===== NAV DESKTOP SPACING IMPROVE ===== */
+@media (min-width: 769px){
+  nav ul{
+    gap: 22px;
+  }
+  nav a{
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+}
+
+/* ===== GRID DESKTOP BALANCE ===== */
+@media (min-width: 992px){
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== CARD IMAGE DESKTOP FIX ===== */
+@media (min-width: 992px){
+  .card img{
+    max-height: 180px;
+  }
+}
+
+/* ===== SLIDER HEIGHT RESPONSIVE ===== */
+@media (min-width: 992px){
+  .slider{
+    height: 380px;
+  }
+}
+
+/* ===== GALLERY IMAGE DESKTOP IMPROVE ===== */
+@media (min-width: 992px){
+  .gallery-item img{
+    height: 200px;
+  }
+}
+
+/* ===== HOME SECTION DESKTOP ALIGN ===== */
+@media (min-width: 992px){
+  .home-sections{
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+/* ===== FOOTER DESKTOP READABILITY ===== */
+@media (min-width: 992px){
+  footer{
+    font-size: 15px;
+  }
+}
+@media (max-width:768px){
+  .menu-toggle{
+    margin-left: 12px;   /* thoda andar space */
+  }
+}
+@media (max-width:768px){
+  .menu-toggle{
+    position: relative;
+    right: -10px;   /* + value = aur right */
+    top: 1px;      /* thoda niche/upar */
+  }
 }
