@@ -1,4 +1,4 @@
-## Hi there 👋
+## This Website is a R.S. English Medium High school Bagaijor Official website 🙂
 
 <!--
 **rsenglishschool/rsenglishschool** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
