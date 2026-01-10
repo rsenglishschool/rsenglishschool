@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Mr. Madhumangal Sahu",
+    "designation": "Head Master",
+    "subject": "Non Teaching Staff",
+    "photo": "img/mm.jpg",
+    "short_bio": "Mr. Madhumangal Sahu स्कूल के सभी प्रशासनिक कार्यों और संचालन की देखरेख करते हैं।"
+  },
+  {
+    "name": "Mr. Naveen Bagh",
+    "designation": "Computer Operator",
+    "subject": "Non Teaching Staff",
+    "photo": "img/bagh.jpg",
+    "short_bio": "कंप्यूटर सिस्टम और डिजिटल रिकॉर्ड का रखरखाव करते हैं।"
+  },
+  {
+    "name": "Mr. Shankarlal Pinjara",
+    "designation": "Cleark",
+    "subject": "Non Teaching Staff",
+    "photo": "img/shankar.jpg",
+    "short_bio": "दैनिक प्रशासनिक कार्यों और फाइल प्रबंधन में सहायता प्रदान करते हैं।"
+  },
+  {
+    "name": "Mr. Vinod Sahu",
+    "designation": "Accountant",
+    "subject": "Non Teaching Staff",
+    "photo": "img/vinod.jpg",
+    "short_bio": "स्कूल के वित्तीय रिकॉर्ड और हिसाब-किताब की जिम्मेदारी संभालते हैं।"
+  },
+  {
+    "name": "Mr. Hrishikesh Barik",
+    "designation": "Computer Operator",
+    "subject": "Non Teaching Staff",
+    "photo": "img/hrishi.jpg",
+    "short_bio": "आईटी और कंप्यूटर से संबंधित सभी कार्यों में सहायता करते हैं।"
+  },
+  {
+    "name": "Mr. Durgashankar Choudhary",
+    "designation": "Principal",
+    "subject": "Hindi Teacher",
+    "photo": "img/durgashankar.jpg",
+    "short_bio": "प्राचार्य के रूप में स्कूल की शिक्षा और प्रशासन का नेतृत्व करते हैं।"
+  },
+  {
+    "name": "Mr. Madhu Soodan Choudhary",
+    "designation": "Lecturer",
+    "subject": "Sanskrit Teacher",
+    "photo": "img/madhusoodan.jpg",
+    "short_bio": "संस्कृत विषय में अनुभव रखते हैं और छात्रों को इंटरएक्टिव तरीके से पढ़ाते हैं।"
+  },
+  {
+    "name": "Mrs. Ambica Barik",
+    "designation": "U.D. Teacher",
+    "subject": "English Teacher",
+    "photo": "img/ambica.jpg",
+    "short_bio": "अंग्रेज़ी में छात्रों की भाषा और संवाद कौशल सुधारने में मदद करती हैं।"
+  },
+  {
+    "name": "Mr. Hemant Sahu",
+    "designation": "U.D. Teacher",
+    "subject": "SST Teacher",
+    "photo": "img/hemant.jpg",
+    "short_bio": "सामाजिक विज्ञान विषय पढ़ाते हैं और छात्रों में आलोचनात्मक सोच विकसित करते हैं।"
+  },
+  {
+    "name": "Miss. Rinki Choudhary",
+    "designation": "U.D. Teacher",
+    "subject": "Science Teacher",
+    "photo": "img/rinki.jpg",
+    "short_bio": "विज्ञान विषय में प्रयोग और इंटरएक्टिव शिक्षा के माध्यम से छात्रों को सिखाती हैं।"
+  },
+  {
+    "name": "Mr. Bhuvaneshvar Sahu",
+    "designation": "Asst. Teacher",
+    "subject": "Maths Teacher",
+    "photo": "img/bhuvaneshvar.jpg",
+    "short_bio": "गणित पढ़ाने में दक्ष हैं और छात्रों को आसान तरीकों से समझाते हैं।"
+  },
+  {
+    "name": "Miss. Beronika Soreng",
+    "designation": "Asst. Teacher",
+    "subject": "Primary English Teacher",
+    "photo": "img/beronika.jpg",
+    "short_bio": "प्राथमिक स्तर पर अंग्रेज़ी भाषा पढ़ाती हैं और छात्रों में संचार कौशल विकसित करती हैं।"
+  },
+  {
+    "name": "Miss. Vimala Das",
+    "designation": "Asst. Teacher",
+    "subject": "Primary EVS Teacher",
+    "photo": "img/vimala.jpg",
+    "short_bio": "EVS पढ़ाती हैं और छात्रों में पर्यावरण और जीवन विज्ञान के प्रति जागरूकता बढ़ाती हैं।"
+  },
+  {
+    "name": "Miss. Deeksha Sathpathee",
+    "designation": "Asst. Teacher",
+    "subject": "Primary Moral Science Teacher",
+    "photo": "img/deeksha.jpg",
+    "short_bio": "छात्रों में नैतिक और सामाजिक मूल्यों का विकास करती हैं।"
+  },
+  {
+    "name": "Miss. Dipeeka Pradhan",
+    "designation": "Asst. Teacher",
+    "subject": "Primary Hindi Teacher",
+    "photo": "img/dipeeka.jpg",
+    "short_bio": "हिंदी भाषा में छात्रों की पढ़ाई और लेखन कौशल में सुधार करती हैं।"
+  },
+  {
+    "name": "Mrs. Nikita Nande",
+    "designation": "Asst. Teacher",
+    "subject": "Primary Maths/Computer Teacher",
+    "photo": "img/nikita.jpg",
+    "short_bio": "गणित और कंप्यूटर में छात्रों की समझ और कौशल को मजबूत करती हैं।"
+  },
+  {
+    "name": "Miss. Pratima Sahu",
+    "designation": "Asst. Teacher",
+    "subject": "Pri-Primary All subject Teacher",
+    "photo": "img/pratima.jpg",
+    "short_bio": "प्राथमिक स्तर पर सभी विषयों में छात्रों को पढ़ाती हैं।"
+  },
+  {
+    "name": "Mrs. Lokesh Nirmalkar",
+    "designation": "Asst. Teacher",
+    "subject": "Computer Teacher",
+    "photo": "img/lokesh.jpg",
+    "short_bio": "कंप्यूटर पढ़ाने में विशेषज्ञ हैं और छात्रों को तकनीकी कौशल सिखाती हैं।"
+  },
+  {
+    "name": "Mrs. Bhupendra Nand",
+    "designation": "Asst. Teacher",
+    "subject": "Navodaya Teacher",
+    "photo": "img/bhupendra.jpg",
+    "short_bio": "Navodaya पाठ्यक्रम पढ़ाती हैं और छात्रों में अकादमिक क्षमता विकसित करती हैं।"
+  }
+]

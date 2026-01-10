@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notice | R.S. English Med. High School Bagaijor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SAME HEADER -->
+<header>
+<h1>🏫  R.S. English Med. High School Bagaijor</h1>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav>
+<ul id="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li class="dropdown">
+    <a href="gallery.html">Gallery</a>
+  </li>
+
+  <li class="dropdown">
+    <a href="javascript:void(0)" onclick="toggleSubMenu()">Executive Members ▾</a>
+    <ul class="submenu" id="execMenu">
+      <li><a href="chairman.html">Chairman's Message</a></li>
+      <li><a href="principal.html">Principal's Message</a></li>
+      <li><a href="management.html">School Management</a></li>
+     
+    </ul>
+  </li>
+<li><a href="teachers.html">Teachers</a></li>
+<li><a href="notifications.html">Notifications</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section>
+  <div id="noticeBox" class="notice-container">
+    Loading notice...
+  </div>
+</section>
+
+<footer>
+© 2026  R.S. English Med. High School Bagaijor |
+<a href="index.html">Home</a> |
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms</a> |
+<a href="disclaimer.html">Disclaimer</a>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+let noticeId = params.get("id");
+
+fetch("notifications.json")
+.then(res => res.json())
+.then(data => {
+
+  // agar id nahi hai → last notice uthao
+  if(!noticeId){
+    noticeId = data[data.length - 1].id;
+  }
+
+  const n = data.find(x => x.id === noticeId);
+  const box = document.getElementById("noticeBox");
+
+  if(!n){
+    box.innerHTML = "<h2>Notice not found</h2>";
+    return;
+  }
+
+  let attachmentHTML = "";
+
+  if(n.attachment){
+    attachmentHTML += `
+      <p>📎 <a href="${n.attachment}" target="_blank">View PDF Attachment</a></p>
+    `;
+  }
+
+  if(n.image){
+    attachmentHTML += `
+      <img src="${n.image}" alt="${n.title}">
+    `;
+  }
+
+  box.innerHTML = `
+    <h2 class="section-title">${n.title}</h2>
+    <div class="notice-date">📅 ${n.date || ""}</div>
+    <p>${n.details}</p>
+    ${attachmentHTML}
+  `;
+});
+</script>
+
+
+</body>
+</html>

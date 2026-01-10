@@ -1,0 +1,398 @@
+
+:root {
+  --primary:#1e88e5;
+  --secondary:#1565c0;
+  --light:#f5f7fa;
+  --dark:#222;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:var(--light);color:var(--dark)}
+
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;padding:15px 20px;
+  display:flex;justify-content:space-between;align-items:center
+}
+nav ul{list-style:none;display:flex;gap:15px}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
+.menu-toggle{display:none;font-size:24px;cursor:pointer}
+
+section{padding:30px 20px}
+.section-title{color:var(--primary);margin-bottom:15px}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly wider cards */
+  gap: 24px;
+}
+.card{
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  text-align:center
+}
+.card img {
+  width: 100%;
+  height: auto; /* Let image height adjust naturally */
+  max-height: 200px; /* Optional: limit height to avoid huge images */
+  object-fit: contain; /* Show full image without cropping */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #eee; /* Helps show broken image area clearly */
+}
+
+.notice{
+  background:#fff3cd;
+  border-left:5px solid #ffc107;
+  padding:15px;border-radius:6px;margin-bottom:10px
+}
+.notice a{text-decoration:none;color:#000;font-weight:bold}
+
+footer{
+  background:#111;
+  color:#bbb;
+  text-align:center;
+  padding:18px 10px;
+  font-size:14px;
+  line-height:1.8;
+}
+
+footer a{
+  color:#1e88e5;
+  text-decoration:none;
+  margin:0 4px;
+  font-weight:500;
+}
+
+footer a:hover{
+  text-decoration:underline;
+  color:#64b5f6;
+}
+
+/* Mobile spacing fix */
+@media(max-width:600px){
+  footer{
+    font-size:13px;
+    padding:16px 8px;
+  }
+}
+
+@media(max-width:768px){
+  nav ul{
+    position:absolute;top:60px;right:0;
+    background:var(--primary);
+    flex-direction:column;width:200px;display:none
+  }
+  nav ul.show{display:flex}
+  .menu-toggle{display:block}
+}
+.slider{
+  width:100%;
+  height:260px;
+  overflow:hidden;
+}
+.slider img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+/* ===== NOTICE DETAIL PAGE FIX ===== */
+.notice-container{
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.notice-container img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.notice-date{
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+/* ===== MOBILE MENU FIX ===== */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* main links */
+nav ul li a {
+  display: block;
+  padding: 14px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* submenu */
+.submenu {
+  display: none;
+  background: #1e88e5;   /* same blue theme */
+}
+
+/* submenu links */
+.submenu li a {
+  padding-left: 32px;
+  font-size: 15px;
+  background: #1976d2;
+}
+
+/* active/open state */
+.submenu.show {
+  display: block;
+}
+
+/* ===== GALLERY FILTER ===== */
+
+.gallery-filters {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.gallery-filters button {
+  padding: 8px 14px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background: #e0e0e0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.gallery-filters button.active,
+.gallery-filters button:hover {
+  background: #1e88e5;
+  color: #fff;
+}
+
+/* ===== GALLERY GRID ===== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== EVENT NAME OVERLAY ===== */
+
+.gallery-item {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 6px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* show on hover (desktop) */
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* always visible on mobile */
+@media (max-width: 768px) {
+  .overlay {
+    opacity: 1;
+    font-size: 13px;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 14px;
+  padding: 6px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+@media (max-width:768px) {
+  .overlay { opacity: 1; }
+}
+
+/* ===== PROFILE PAGE DESIGN ===== */
+.profile-section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #1e88e5;
+  margin-bottom: 15px;
+}
+
+.profile-section h2 {
+  color: #1e88e5;
+  margin-bottom: 8px;
+}
+
+.profile-section h3 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+}
+
+/* ===== MANAGEMENT GRID IMPROVE ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 8px 0 4px;
+  color: #1e88e5;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .profile-section {
+    padding: 18px;
+    margin: 20px 10px;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-section p {
+    font-size: 15px;
+  }
+}
+
+/* ===== SCHOOL CAMPUS FULL IMAGE ===== */
+.campus-card img {
+  width: 100%;
+  height: 200px;          /* mobile ke liye perfect */
+  object-fit: cover;     /* image crop ho ke full fill */
+  border-radius: 10px;   /* rectangle with smooth corner */
+  background: #eee;
+}
+
+.home-sections{
+  padding: 30px 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.home-card{
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.home-card h2{
+  color: #1e88e5;
+  margin-bottom: 10px;
+}
+
+.home-card ul{
+  padding-left: 18px;
+}
+
+.home-card li{
+  margin-bottom: 6px;
+}

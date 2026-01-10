@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | R.S. English Med. High School Bagaijor</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* ===== GALLERY PAGE ===== */
+.gallery-page{
+  padding:20px;
+  background:#f5f7fb;
+}
+
+.gallery-title{
+  font-size:26px;
+  color:#1e88e5;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+/* Filter Buttons */
+.filter-buttons{
+  display:flex;
+  gap:10px;
+  margin-bottom:25px;
+  flex-wrap:wrap;
+}
+
+.filter-btn{
+  border:none;
+  padding:8px 18px;
+  border-radius:25px;
+  background:#eee;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.filter-btn.active{
+  background:#1e88e5;
+  color:#fff;
+}
+
+/* Gallery Grid */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+}
+
+/* Gallery Card */
+.gallery-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.gallery-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  background:#e0e0e0;
+  cursor:pointer;
+}
+
+.gallery-caption{
+  background:#666;
+  color:#fff;
+  padding:8px;
+  text-align:center;
+  font-size:14px;
+}
+.gallery-desc{
+  font-size:13px;
+  color:#444;
+  padding:8px 10px 12px;
+  line-height:1.5;
+  text-align:left;
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  z-index:9999;
+  justify-content:center;
+  align-items:center;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:85%;
+  border-radius:10px;
+}
+
+.lightbox span{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-size:32px;
+  color:#fff;
+  cursor:pointer;
+}
+
+@media(max-width:480px){
+  .gallery-card img{ height:130px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🏫 R.S. English Med. High School Bagaijor</h1>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav>
+<ul id="menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+
+<li class="dropdown">
+<a href="javascript:void(0)" onclick="toggleSubMenu()">Executive Members ▾</a>
+<ul class="submenu" id="execMenu">
+<li><a href="chairman.html">Chairman's Message</a></li>
+<li><a href="principal.html">Principal's Message</a></li>
+<li><a href="management.html">School Management</a></li>
+</ul>
+</li>
+
+<li><a href="teachers.html">Teachers</a></li>
+<li><a href="notifications.html">Notifications</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- ===== GALLERY ===== -->
+<!-- ===== GALLERY ===== -->
+<section class="gallery-page">
+
+<h2 class="gallery-title">School Gallery</h2>
+
+<div class="filter-buttons">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="campus">Campus</button>
+  <button class="filter-btn" data-filter="program">Programs</button>
+</div>
+
+<div class="gallery-grid">
+
+  <!-- Campus -->
+  <div class="gallery-card campus">
+  <img src="img/mainbuilding.jpg"
+       alt="R.S. English Med. High School Bagaijor main school building"
+       onclick="openLightbox(this)">
+
+  <div class="gallery-caption">Main Building</div>
+
+  <p class="gallery-desc">
+    R.S. English Med. High School Bagaijor का मुख्य भवन
+    आधुनिक सुविधाओं से सुसज्जित है।
+    यह भवन विद्यार्थियों के लिए
+    सुरक्षित, अनुशासित एवं
+    सकारात्मक शैक्षणिक वातावरण प्रदान करता है।
+  </p>
+  </div>
+
+
+  <div class="gallery-card campus">
+  <img src="img/playground.jpg"
+       alt="Playground of R.S. English Med. High School Bagaijor"
+       onclick="openLightbox(this)">
+
+  <div class="gallery-caption">Play Ground</div>
+
+  <p class="gallery-desc">
+    विद्यालय का खेल मैदान विद्यार्थियों के
+    शारीरिक एवं मानसिक विकास में
+    महत्वपूर्ण भूमिका निभाता है।
+    यहाँ नियमित खेल गतिविधियाँ आयोजित की जाती हैं।
+  </p>
+  </div>
+
+
+  <!-- Programs -->
+ <div class="gallery-card program">
+  <img src="img/dance.jpg"
+       alt="विद्यालय के प्रांगण में वार्षिक समारोह के दौरान पारंपरिक नृत्य प्रस्तुत करती छात्राएँ"
+       onclick="openLightbox(this)">
+
+  <div class="gallery-caption">Annual function | Dance</div>
+
+  <p class="gallery-desc">
+    विद्यालय के वार्षिक समारोह के अवसर पर छात्राओं द्वारा
+    पारंपरिक वेशभूषा में सुंदर सांस्कृतिक नृत्य की प्रस्तुति दी जा रही है।
+    इस कार्यक्रम के माध्यम से विद्यार्थियों की कला,
+    आत्मविश्वास एवं सांस्कृतिक मूल्यों को मंच प्रदान किया जाता है।
+  </p>
+</div>
+
+ <div class="gallery-card program">
+  <img src="img/rangoli_com.jpg"
+       alt="विद्यालय में आयोजित रंगोली प्रतियोगिता के दौरान रंगीन रंगोली बनाती छात्राएँ एवं शिक्षिकाएँ"
+       onclick="openLightbox(this)">
+
+  <div class="gallery-caption">Rangoli Compitition</div>
+
+  <p class="gallery-desc">
+    विद्यालय में आयोजित रंगोली प्रतियोगिता के अंतर्गत
+    छात्राओं एवं शिक्षिकाओं द्वारा रंग-बिरंगी और आकर्षक रंगोलियों का निर्माण किया गया।
+    इस गतिविधि का उद्देश्य विद्यार्थियों में रचनात्मकता,
+    सौंदर्य-बोध, टीमवर्क तथा भारतीय सांस्कृतिक परंपराओं के प्रति
+    जागरूकता को बढ़ावा देना है।
+  </p>
+</div>
+
+ <div class="gallery-card program">
+  <img src="img/scienceex.jpg"
+       alt="विद्यालय में आयोजित विज्ञान प्रदर्शनी के दौरान विज्ञान मॉडल प्रस्तुत करती छात्राएँ"
+       onclick="openLightbox(this)">
+
+  <div class="gallery-caption"> Science Exhibition</div>
+
+  <p class="gallery-desc">
+    विद्यालय में आयोजित विज्ञान प्रदर्शनी के अंतर्गत
+    छात्राओं द्वारा विज्ञान से संबंधित विभिन्न शैक्षिक मॉडलों
+    एवं प्रयोगों का प्रदर्शन किया गया।
+    इस गतिविधि का उद्देश्य विद्यार्थियों में वैज्ञानिक सोच,
+    नवाचार, समस्या-समाधान क्षमता तथा व्यावहारिक ज्ञान को
+    बढ़ावा देना है।
+  </p>
+</div>
+ <div class="gallery-card program">
+  <img src="img/15aug.jpg"
+       alt="विद्यालय में 15 अगस्त स्वतंत्रता दिवस समारोह के दौरान ध्वजारोहण एवं छात्र-छात्राओं की सहभागिता"
+       onclick="openLightbox(this)">
+
+  <div class="gallery-caption">Independence Day Celebration</div>
+
+  <p class="gallery-desc">
+    विद्यालय परिसर में 15 अगस्त के अवसर पर
+    स्वतंत्रता दिवस समारोह बड़े हर्षोल्लास के साथ मनाया गया।
+    इस अवसर पर ध्वजारोहण, देशभक्ति गीत, भाषण एवं
+    सांस्कृतिक कार्यक्रमों के माध्यम से
+    विद्यार्थियों में राष्ट्रप्रेम, एकता और
+    जिम्मेदार नागरिक बनने की भावना को प्रोत्साहित किया गया।
+  </p>
+</div>
+  <div class="gallery-card program">
+  <img src="img/yoga.jpg"
+       alt="विद्यालय परिसर में शिक्षक द्वारा विद्यार्थियों को योग अभ्यास सिखाते हुए"
+       onclick="openLightbox(this)">
+
+  <div class="gallery-caption">Yoga Session</div>
+
+  <p class="gallery-desc">
+    विद्यालय परिसर में शिक्षक द्वारा विद्यार्थियों को
+    नियमित योग अभ्यास कराया जा रहा है।
+    योग सत्र का उद्देश्य विद्यार्थियों के
+    शारीरिक स्वास्थ्य, मानसिक एकाग्रता,
+    अनुशासन एवं आत्म-नियंत्रण को विकसित करना है,
+    जिससे उनका सर्वांगीण विकास सुनिश्चित हो सके।
+  </p>
+</div>
+
+
+  <div class="gallery-card program">
+  <img src="img/yogadivas.jpg"
+       alt="विद्यालय में अंतरराष्ट्रीय योग दिवस के अवसर पर सामूहिक योग अभ्यास करते विद्यार्थी"
+       onclick="openLightbox(this)">
+
+  <div class="gallery-caption">International Yoga Day</div>
+
+  <p class="gallery-desc">
+    विद्यालय परिसर में अंतरराष्ट्रीय योग दिवस
+    उत्साहपूर्वक मनाया गया, जिसमें सभी कक्षाओं के
+    विद्यार्थियों ने सामूहिक रूप से योग अभ्यास में भाग लिया।
+    इस आयोजन का उद्देश्य विद्यार्थियों में
+    स्वस्थ जीवनशैली, मानसिक शांति,
+    अनुशासन एवं आत्म-संयम की भावना को विकसित करना है।
+  </p>
+</div>
+
+
+
+</div>
+</section>
+
+
+<footer>
+© 2026  R.S. English Med. High School Bagaijor |
+<a href="index.html">Home</a> |
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms</a> |
+<a href="disclaimer.html">Disclaimer</a>
+</footer>
+
+<!-- ===== LIGHTBOX HTML ===== -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span>×</span>
+  <img id="lightboxImg">
+</div>
+
+<!-- ===== FILTER SCRIPT ===== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".gallery-card");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+
+      buttons.forEach(b => b.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.dataset.filter;
+
+      cards.forEach(card => {
+        card.style.display =
+          (filter === "all" || card.classList.contains(filter))
+          ? "block" : "none";
+      });
+
+    });
+  });
+});
+
+/* Lightbox */
+function openLightbox(img){
+  document.getElementById("lightboxImg").src = img.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
