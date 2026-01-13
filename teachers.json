@@ -76,8 +76,7 @@
     "photo": "img/bhuvaneshvar.jpg",
     "short_bio": "गणित पढ़ाने में दक्ष हैं और छात्रों को आसान तरीकों से समझाते हैं।"
   },
-  {
-    "name": "Miss. Beronika Soreng",
+  {भाषा "name": "Miss. Beronika Soreng",
     "designation": "Asst. Teacher",
     "subject": "Primary English Teacher",
     "photo": "img/beronika.jpg",
@@ -89,20 +88,6 @@
     "subject": "Primary EVS Teacher",
     "photo": "img/vimala.jpg",
     "short_bio": "EVS पढ़ाती हैं और छात्रों में पर्यावरण और जीवन विज्ञान के प्रति जागरूकता बढ़ाती हैं।"
-  },
-  {
-    "name": "Miss. Deeksha Sathpathee",
-    "designation": "Asst. Teacher",
-    "subject": "Primary Moral Science Teacher",
-    "photo": "img/deeksha.jpg",
-    "short_bio": "छात्रों में नैतिक और सामाजिक मूल्यों का विकास करती हैं।"
-  },
-  {
-    "name": "Miss. Dipeeka Pradhan",
-    "designation": "Asst. Teacher",
-    "subject": "Primary Hindi Teacher",
-    "photo": "img/dipeeka.jpg",
-    "short_bio": "हिंदी भाषा में छात्रों की पढ़ाई और लेखन कौशल में सुधार करती हैं।"
   },
   {
     "name": "Mrs. Nikita Nande",
@@ -124,12 +109,5 @@
     "subject": "Computer Teacher",
     "photo": "img/lokesh.jpg",
     "short_bio": "कंप्यूटर पढ़ाने में विशेषज्ञ हैं और छात्रों को तकनीकी कौशल सिखाती हैं।"
-  },
-  {
-    "name": "Mrs. Bhupendra Nand",
-    "designation": "Asst. Teacher",
-    "subject": "Navodaya Teacher",
-    "photo": "img/bhupendra.jpg",
-    "short_bio": "Navodaya पाठ्यक्रम पढ़ाती हैं और छात्रों में अकादमिक क्षमता विकसित करती हैं।"
   }
 ]
